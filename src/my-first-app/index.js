@@ -166,24 +166,78 @@ export default {
             "name": "calendly",
             "steps": [
               {
+                "transitions": [
+                  {
+                    "target": "7T4EFrux8",
+                    "condition": {
+                      "op": "exists",
+                      "values": [
+                        "/#steps.WwxkUfR-z.id",
+                        ""
+                      ]
+                    },
+                    "meta": {
+                      "name": "Customer exists"
+                    }
+                  },
+                  {
+                    "target": "dy-LSbTiW",
+                    "condition": {
+                      "op": "dne",
+                      "values": [
+                        "/#steps.WwxkUfR-z.id",
+                        ""
+                      ]
+                    }
+                  }
+                ],
+                "errorCases": [],
+                "id": "WwxkUfR-z",
+                "action": "kustomer.customer.find-by-email",
+                "params": {
+                  "email": "/#steps.1.customer.email"
+                },
+                "appVersion": "kustomer-^1.9.2"
+              },
+              {
+                "transitions": [
+                  {
+                    "target": "fHs-U8PHI",
+                    "condition": {
+                      "op": "true",
+                      "values": [
+                        true
+                      ]
+                    },
+                    "meta": {
+                      "name": "Check to see if customer exists"
+                    }
+                  }
+                ],
+                "errorCases": [],
+                "id": "7T4EFrux8"
+              },
+              {
                 "transitions": [],
                 "errorCases": [],
-                "id": "oEWqMzO_q",
-                "action": "kustomer.rest-api.json",
-                "appVersion": "kustomer-^1.9.2",
-                "meta": {
-                  "displayName": "Create Calendly Event"
-                },
+                "id": "fHs-U8PHI"
+              },
+              {
+                "transitions": [],
+                "errorCases": [],
+                "id": "dy-LSbTiW",
+                "action": "kustomer.customer.create",
                 "params": {
-                  "uri": "/#steps.1.attributes.data.payload.event",
-                  "method": "GET"
-                }
+                  "name": "/#steps.WwxkUfR-z.name",
+                  "email": "/#steps.WwxkUfR-z.emails.0.email"
+                },
+                "appVersion": "kustomer-^1.9.2"
               }
             ],
             "trigger": {
               "transitions": [
                 {
-                  "target": "oEWqMzO_q",
+                  "target": "WwxkUfR-z",
                   "condition": {
                     "op": "true",
                     "values": [
@@ -194,10 +248,9 @@ export default {
               ],
               "eventName": "kustomer.app.calendly_app_61a7fb3943166f00ea266016.update-event",
               "id": "1",
-              "appVersion": "calendly_app_61a7fb3943166f00ea266016-^2.0.0"
+              "appVersion": "calendly_app_61a7fb3943166f00ea266016-^4.0.0"
             }
-          }
-      ],
+          }],
 
 
 
