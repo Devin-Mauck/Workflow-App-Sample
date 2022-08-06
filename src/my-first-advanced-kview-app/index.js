@@ -4,7 +4,7 @@ import Kviews from './kviews';
 // For example, my_first_advanced_kview_app__myKustomerOrg01_01
 export default {
     app: 'my_first_advanced_kview_app',
-    version: '0.0.1',
+    version: '1.0.0',
     appDetails: { // note: the object and all it's fields are optional, but will be used to fill out the app store listing within Kustomer
         appDeveloper: {
             name: '<<Insert the developer\'s name>>',

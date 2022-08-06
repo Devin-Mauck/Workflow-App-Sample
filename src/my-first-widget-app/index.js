@@ -6,7 +6,7 @@ import Widgets from './widgets';
 // For example, my_first_widget_app__myKustomerOrg01_01
 export default {
     app: 'my_first_widget_app',
-    version: '0.0.1',
+    version: '1.0.0',
     title: 'My First Widget App',
     description: 'My first widget app, which also includes custom app settings to configure the widget url',
     iconUrl: 'https://pbs.twimg.com/profile_images/1146053597785993217/DcPQyO9Q_400x400.png',

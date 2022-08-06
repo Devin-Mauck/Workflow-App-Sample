@@ -4,7 +4,7 @@ import OutboundWebhooks from './outbound-webhooks';
 // For example, my_first_outbound_webhook_app__myKustomerOrg01_01
 export default {
     app: 'my_first_outbound_webhook_app',
-    version: '0.0.1',
+    version: '1.0.0',
     appDetails: { // note: the object and all it's fields are optional, but will be used to fill out the app store listing within Kustomer
         appDeveloper: {
             name: '<<Insert the developer\'s name>>',
